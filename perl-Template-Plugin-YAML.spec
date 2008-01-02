@@ -15,6 +15,7 @@ Patch0:		perl-Template-Plugin-YAML-version-remove.patch
 BuildArch:	noarch
 BuildRequires:	perl-YAML
 BuildRequires:	perl-Template
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This is a simple Template Toolkit Plugin Interface to the YAML module.
