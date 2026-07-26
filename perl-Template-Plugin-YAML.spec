@@ -1,15 +1,13 @@
 %define upstream_name	 Template-Plugin-YAML
-%define upstream_version 1.23
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	1.23
+Release:	6
 
 Summary:	Plugin interface to YAML
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Template-Plugin-YAML
-Source0:	https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Template-Plugin-YAML-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Template-Plugin-YAML-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -21,7 +19,7 @@ BuildArch:	noarch
 This is a simple Template Toolkit Plugin Interface to the YAML module.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -42,9 +40,7 @@ make test
 %changelog
 * Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 1.230.0-1mdv2010.0
 + Revision: 405536
-- rebuild using %%perl_convert_version
-
-* Wed Dec 17 2008 Guillaume Rousse <guillomovitch@mandriva.org> 1.23-1mdv2009.1
+- rebuild using %1.23 Wed Dec 17 2008 Guillaume Rousse <guillomovitch@mandriva.org> 1.23-1mdv2009.1
 + Revision: 315132
 - new version
 
